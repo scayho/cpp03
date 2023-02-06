@@ -21,8 +21,7 @@ int main(void)
     std::cout << "----------------------\n";
     ClapTrap s("salam");
     std::cout << "----------------------\n";
-    ClapTrap pp = s;
-    std::cout << "----------------------\n";
+    ClapTrap pp = ClapTrap();
 
     std::cout << o.getName() << std::endl;
     std::cout << o.getHP() << std::endl;

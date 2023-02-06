@@ -35,7 +35,7 @@ ClapTrap::ClapTrap(std::string name)
     this->Attack_Damage = 0;
 }
 
-ClapTrap::ClapTrap(ClapTrap &new_objet)
+ClapTrap::ClapTrap(ClapTrap const &new_objet)
 {
     std::cout << " sssssdefault constructor has ben called !" << std::endl;
     this->name = new_objet.getName();
@@ -78,22 +78,22 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 // the getters functions
 
-std::string ClapTrap::getName(void)
+std::string ClapTrap::getName(void) const
 {
     return (this->name);
 }
 
-int ClapTrap::getAD(void)
+int ClapTrap::getAD(void) const
 {
     return (this->Attack_Damage);
 }
 
-int ClapTrap::getEP(void)
+int ClapTrap::getEP(void) const
 {
     return (this->Energy_Points);
 }
 
-int ClapTrap::getHP(void)
+int ClapTrap::getHP(void) const
 {
     return (this->Hit_Points);
 }
@@ -122,7 +122,7 @@ void ClapTrap::setHP(int number)
 
 // operators overloading 
 
-ClapTrap &ClapTrap::operator = (ClapTrap & s)
+ClapTrap &ClapTrap::operator = (ClapTrap const & s)
 {
     this->name = s.getName();
     this->Attack_Damage = s.getAD();

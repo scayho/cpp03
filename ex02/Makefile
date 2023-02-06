@@ -15,10 +15,10 @@ CC=c++
 
 CFLAGS= -Wall -Wextra -Werror -std=c++98
 
-NAME=ScavTrap
-HDR=ClapTrap.hpp ScavTrap.hpp
+NAME=FragTrap
+HDR=ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
-SRC := ClapTrap.cpp main.cpp ScavTrap.cpp
+SRC := ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJ := $(SRC:.cpp=.o)
 
@@ -35,7 +35,7 @@ clean :
 	rm -rf  $(OBJ)
 
 fclean: clean
-	rm -rf ScavTrap
+	rm -rf FragTrap
 
 re: fclean all
 

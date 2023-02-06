@@ -13,12 +13,13 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
-    ClapTrap s = ClapTrap();
-    ScavTrap sss("baek-ryun");
-    ScavTrap omarox = ScavTrap("ok");
+    // ClapTrap s = ClapTrap();
+    FragTrap sss("jinsung ha");
+    // ScavTrap omarox = ScavTrap("ok");
 
     std::cout << "°°°°°°°°°name " << sss.getName() << std::endl;
     std::cout << "°°°°°°°°°hit point " << sss.getHP() << std::endl;
@@ -31,7 +32,7 @@ int main(void)
     std::cout << "°°°°°°°°°attack damage " << sss.getAD() << std::endl;
     std::cout << "°°°°°°°°°energy point " << sss.getEP() << std::endl;
     std::cout << "----------------------\n";
-    sss.guardGate();
+    sss.highFivesGuys();
     std::cout << "°°°°°°°°°name " << sss.getName() << std::endl;
     std::cout << "°°°°°°°°°hit point " << sss.getHP() << std::endl;
     std::cout << "°°°°°°°°°attack damage " << sss.getAD() << std::endl;

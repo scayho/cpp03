@@ -28,7 +28,7 @@ class ClapTrap {
     ClapTrap();
     ~ClapTrap();
     ClapTrap(std::string name);
-    ClapTrap(ClapTrap &new_objet);
+    ClapTrap(ClapTrap const &new_objet);
     
     // member functions 
 
@@ -38,10 +38,10 @@ class ClapTrap {
     
     // the getters functions 
     
-    std::string getName(void);
-    int getAD(void);
-    int getEP(void);
-    int getHP(void);
+    std::string getName(void) const;
+    int getAD(void) const;
+    int getEP(void) const;
+    int getHP(void) const;
     
     // the setters functions
     
@@ -52,7 +52,7 @@ class ClapTrap {
     
     // operators overloading
     
-    ClapTrap &operator = (ClapTrap & s);
+    ClapTrap &operator = (ClapTrap const  & s);
 };
 
 #endif
